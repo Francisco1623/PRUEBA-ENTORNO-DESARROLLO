@@ -7,7 +7,7 @@ CREATE TABLE BARCOS
 	capacidad NUMBER(8),
 	nacionalidad VARCHAR2(50),
 	CONSTRAINT pk_matricula PRIMARY KEY (matricula),
-	CONSTRAINT ch_matricula CHECK(regexp_like(matricula,'[A-Z]{2}[-][0-9]{4}'))
+	CONSTRAINT ch_matricula CHECK(regexp_like(matricula,'[A-Z]{2}[-][0-9]{3}'))
 	);
 
 CREATE TABLE ESPECIE
@@ -77,7 +77,7 @@ DROP TABLE FECHAS_CAPTURAS_PERMITIDAS CASCADE CONSTRAINTS;
 
 
 --Para convertir la fecha de cadena a fecha--
---Le decimos que nos muestre una fecha mayor que la fecha que hemos puesto ahí-- 
+--Le decimos que nos muestre una fecha mayor que la fecha que hemos puesto ahÃ­-- 
 Fecha > TO_date('01/02/2022','DD/MM/YYYY')
 --Para la fecha inicial y fecha que termina--
 TO_CHAR(fecha inicial, 'mm/dd')
