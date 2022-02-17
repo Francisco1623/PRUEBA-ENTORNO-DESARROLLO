@@ -7,9 +7,9 @@ CREATE TABLE BARCOS
 	capacidad NUMBER(8),
 	nacionalidad VARCHAR2(50),
 	CONSTRAINT pk_matricula PRIMARY KEY (matricula),
-	CONSTRAINT ch_matricula CHECK(regexp_like(matricula,'[A-Z]{2}[-][0-9]{3}'))
+	CONSTRAINT ch_matricula CHECK(regexp_like(matricula,'[A-Z]{2}[-][0-9]{4}'))
 	);
-
+--HOLA MUNDO
 CREATE TABLE ESPECIE
 (
 	codigo VARCHAR2(30),
